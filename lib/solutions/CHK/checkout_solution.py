@@ -3,11 +3,14 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus):
-        list = []
+        items = []
         for item in skus:
-            list.append(item)
+            items.append(item)
         
-        print(list)
+        print(items)
 
     
-CheckoutSolution
+if __name__ == "__main__":
+    solution = CheckoutSolution()
+    solution.checkout("ABCD")  # Example input
+
