@@ -19,28 +19,32 @@ class CheckoutSolution:
         c_count = items.count('C')
         d_count = items.count('D')
 
-        if a_count % 3 == 0:
-            amount = a_count // 3
-            total += 130 * amount
-        else: 
-            total += 50 * a_count
+        a_remainder = a_count % 3 
+        a_amount = a_count // 3
 
-        if b_count % 2 == 0:
-            amount = b_count // 2
-            total += 45 * amount
-        else: 
-            total += 30 * b_count
+        total += 130 * a_amount
+        total += 50 * a_remainder
         
+
+        b_remainder = b_count % 2 
+        b_amount = b_count // 2
+
+        total += 45 * b_amount
+        total += 30 * b_remainder
 
         total += 20 * c_count
 
         total += 15 * d_count
             
-    
+        print(total)
         return total
 
     
 
+if __name__ == "__main__":
+    solution = CheckoutSolution()
+
+    solution.checkout("AAAA")
 
 
 
