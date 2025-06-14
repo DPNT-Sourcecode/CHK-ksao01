@@ -20,13 +20,16 @@ class CheckoutSolution:
         d_count = items.count('D')
         e_count = items.count('E')
 
-        a_remainder = a_count % 3 
-        a_amount = a_count // 3
+        a5_amount = a_count // 5
         a5_remainder = a_count % 5
-        a_amount = a_count // 5
 
-        total += 130 * a_amount
-        total += 50 * a_remainder
+        a3_remainder = a5_remainder % 3 
+        a3_amount = a5_remainder // 3
+    
+
+        total += 130 * a3_amount
+        total += 200 * a5_amount
+        total += 50 * a3_remainder
 
         a5_remainder = a_count % 5
         
@@ -49,4 +52,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("AAAAA")
+    solution.checkout("AAAAAAAA")
