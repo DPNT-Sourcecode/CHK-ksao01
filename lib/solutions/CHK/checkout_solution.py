@@ -11,8 +11,10 @@ class CheckoutSolution:
         
         print(items)
 
-        if any(item not in "ABCDEF" for item in items):
+        if any(item not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for item in items):
             return -1
+        
+        print(total)
         
         a_count = items.count('A')
         b_count = items.count('B')
@@ -63,6 +65,7 @@ class CheckoutSolution:
 
         total += 45 * b_amount
         total += 30 * b_remainder
+        
 
         total += 20 * c_count
 
@@ -77,6 +80,7 @@ class CheckoutSolution:
 
         total += 20 * (g_count + t_count + w_count)
 
+        
         h10_amount = h_count // 10
         h10_remainder = h_count % 10
 
@@ -91,6 +95,8 @@ class CheckoutSolution:
         total += 35 + i_count
 
         total += 60 * j_count
+
+        print ("middle",total)
 
         k_remainder = k_count % 2 
         k_amount = k_count // 2
@@ -108,6 +114,7 @@ class CheckoutSolution:
         total += 200 * p_amount
         total += 50 * p_remainder
         
+
         q_remainder = q_count % 3
         q_amount = q_count // 3
 
@@ -144,4 +151,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("FFFFF")
+    solution.checkout("")
