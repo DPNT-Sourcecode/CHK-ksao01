@@ -48,6 +48,41 @@ class CheckoutSolution:
         m_count = max(0, m_count - (n_count // 3))
         q_count = max(0, q_count - (r_count // 3))
 
+        group_discount_items = ['S', 'T', 'X', 'Y', 'Z']
+
+        remaining_items = total_group_items % 3
+
+        
+        group_counts = {
+            'S': s_count, 
+            'T': t_count, 
+            'X': x_count, 
+            'Y': y_count, 
+            'Z': z_count
+        }
+
+        group_prices = {
+            'S': 20, 
+            'T': 20, 
+            'X': 17, 
+            'Y': 20, 
+            'Z': 21
+        }
+        
+        total_group_items = s_count + t_count + x_count + y_count + z_count
+        group_discounts = total_group_items // 3
+        total += 45 * group_discounts
+
+        used = 0
+        for item in sorted(group_counts, key = lambda i: -group_prices[i]):
+            while group_counts[item] > 0 and used < group_discounts * 3:
+                group_counts[item] -= 1
+                used += 1
+        
+        for item, count in group_counts.items():
+            total += count * group_prices[item]
+
+
         a5_amount = a_count // 5
         a5_remainder = a_count % 5
 
@@ -78,7 +113,7 @@ class CheckoutSolution:
 
         total += 10 * f_count 
 
-        total += 20 * (g_count + t_count + w_count)
+        total += 20 * (g_count + w_count)
 
         
         h10_amount = h_count // 10
@@ -106,7 +141,7 @@ class CheckoutSolution:
         total += 150 * k_amount
         total += 80 * k_remainder
 
-        total += 90 * (l_count + x_count)
+        total += 90 * (l_count)
 
         total += 10 * o_count
 
@@ -123,9 +158,7 @@ class CheckoutSolution:
         total += 80 * q_amount
         total += 30 * q_remainder
 
-        total += 50 * (r_count + z_count)
-
-        total += 30 * s_count
+        total += 50 * r_count
 
         free_u = u_count // 4
         u_count -= free_u
@@ -143,7 +176,6 @@ class CheckoutSolution:
         total += 130 * v3_amount
         total += 50 * v2_remainder
         
-        total += 10 * y_count
             
         print(total)
         return total
@@ -153,4 +185,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("E")
+    solution.checkout("STX")
