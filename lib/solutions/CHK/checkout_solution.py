@@ -20,7 +20,7 @@ class CheckoutSolution:
         d_count = items.count('D')
         e_count = items.count('E')
 
-        b_count -= e_count // 2
+        b_count = max(0, b_count - (e_count // 2))
 
         a5_amount = a_count // 5
         a5_remainder = a_count % 5
@@ -43,7 +43,8 @@ class CheckoutSolution:
         total += 20 * c_count
 
         total += 15 * d_count
-
+        print(e_count)
+        print(total)
         total += 40 * e_count
             
         print(total)
@@ -54,4 +55,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("BBBEE")
+    solution.checkout("EE")
