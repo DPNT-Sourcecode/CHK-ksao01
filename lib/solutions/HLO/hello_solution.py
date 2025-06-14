@@ -3,4 +3,7 @@ class HelloSolution:
     
     # friend_name = unicode string
     def hello(self, friend_name):
-        raise NotImplementedError()
+        message = "Hello World"
+    
+        return message + friend_name
+
