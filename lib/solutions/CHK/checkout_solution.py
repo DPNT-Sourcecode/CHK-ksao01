@@ -37,13 +37,11 @@ class CheckoutSolution:
         total += 15 * d_count
             
     
-        print(total)
+        return total
 
     
-if __name__ == "__main__":
-    solution = CheckoutSolution()
 
-    solution.checkout("AAABBCD")  # Example input
+
 
 
 
