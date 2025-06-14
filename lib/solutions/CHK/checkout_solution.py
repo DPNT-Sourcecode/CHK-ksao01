@@ -92,11 +92,13 @@ class CheckoutSolution:
         total += 80 * h10_amount
         total += 10 * h5_remainder
 
-        total += 35 + i_count
+        print ("i",total)
+        total += 35 * i_count
 
+        print ("j",total)
         total += 60 * j_count
 
-        print ("middle",total)
+        
 
         k_remainder = k_count % 2 
         k_amount = k_count // 2
@@ -151,4 +153,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("")
+    solution.checkout("A")
