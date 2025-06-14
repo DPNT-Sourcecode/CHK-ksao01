@@ -6,5 +6,3 @@ class HelloSolution:
         message = "Hello, "
         exc = "!"
         return message + friend_name + exc
-
-
