@@ -20,13 +20,13 @@ class CheckoutSolution:
         d_count = items.count('D')
 
         if a_count % 3 == 0:
-            amount = a_count / 3
+            amount = a_count // 3
             total += 130 * amount
         else: 
             total += 50 * a_count
 
         if b_count % 2 == 0:
-            amount = b_count / 2
+            amount = b_count // 2
             total += 45 * amount
         else: 
             total += 30 * b_count
@@ -44,5 +44,6 @@ if __name__ == "__main__":
     solution = CheckoutSolution()
 
     solution.checkout("AAABBCD")  # Example input
+
 
 
