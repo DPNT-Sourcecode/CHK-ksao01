@@ -48,9 +48,6 @@ class CheckoutSolution:
         m_count = max(0, m_count - (n_count // 3))
         q_count = max(0, q_count - (r_count // 3))
 
-        group_discount_items = ['S', 'T', 'X', 'Y', 'Z']
-
-        remaining_items = total_group_items % 3
 
         
         group_counts = {
@@ -185,4 +182,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("STX")
+    solution.checkout("STXYZ")
