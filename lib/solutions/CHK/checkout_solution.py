@@ -135,7 +135,7 @@ class CheckoutSolution:
         k_remainder = k_count % 2 
         k_amount = k_count // 2
 
-        total += 150 * k_amount
+        total += 120 * k_amount
         total += 70 * k_remainder
 
         total += 90 * (l_count)
@@ -182,4 +182,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("ABCDEFGHIJKLMNOPQRSTUVW")
+    solution.checkout("KKKK")
