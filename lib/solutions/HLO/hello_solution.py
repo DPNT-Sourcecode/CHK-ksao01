@@ -6,5 +6,3 @@ class HelloSolution:
         message = "Hello, World!"
     
         return message 
-
-
