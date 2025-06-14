@@ -1,4 +1,5 @@
 
+
 class CheckoutSolution:
 
     # skus = unicode string
@@ -9,18 +10,28 @@ class CheckoutSolution:
             items.append(item)
         
         print(items)
+
+        if any(item not in "ABCD" for item in items):
+            return -1
+        
+        a_count = items.count('A')
+        b_count = items.count('B')
+
+        if a_count % 3 == 0:
+            amount = a_count / 3
+            total += 130 * amount
+
+        if b_count % 2 == 0:
+            amount = b_count / 2
+            total += 45 * amount
+        
         
         for item in items:
-            if item == 'A':
-                total += 50
-            elif item == 'B':
-                total += 30
-            elif item == 'C':
+            if item == 'C':
                 total += 20
             elif item == 'D':
                 total += 15
-            else: 
-                return -1
+            
     
         print(total)
 
@@ -28,4 +39,5 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("ABCD")  # Example input
+    solution.checkout("AAABBCD")  # Example input
+
