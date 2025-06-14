@@ -71,7 +71,7 @@ class CheckoutSolution:
 
         total += 15 * (d_count + m_count)
 
-        total += 40 * (e_count * n_count)
+        total += 40 * (e_count + n_count)
 
         free_f = f_count // 3
         f_count -= free_f
@@ -153,4 +153,4 @@ class CheckoutSolution:
 if __name__ == "__main__":
     solution = CheckoutSolution()
 
-    solution.checkout("A")
+    solution.checkout("E")
