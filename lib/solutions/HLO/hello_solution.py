@@ -3,7 +3,8 @@ class HelloSolution:
     
     # friend_name = unicode string
     def hello(self, friend_name):
-        message = "Hello World"
+        message = "Hello, World!"
     
-        return message + friend_name
+        return message 
+
 
