@@ -45,7 +45,3 @@ if __name__ == "__main__":
     solution = CheckoutSolution()
 
     solution.checkout("AAAA")
-
-
-
-
