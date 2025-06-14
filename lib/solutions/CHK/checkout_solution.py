@@ -3,4 +3,11 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus):
-        raise NotImplementedError()
+        list = []
+        for item in skus:
+            list.append(item)
+        
+        print(list)
+
+    
+CheckoutSolution
