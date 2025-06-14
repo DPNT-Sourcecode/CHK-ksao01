@@ -49,6 +49,7 @@ from runner.user_input_action import get_user_input
          * Anything really, provided that this file stays runnable.
  
 """
+print("Runner starting...")  # Add this before ChallengeSession starts
 
 entry_point_mapping = EntryPointMapping()
 
